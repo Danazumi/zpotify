@@ -78,7 +78,7 @@ export default function Zearch() {
               return fetch(`https://api.spotify.com/v1/artists/${artistID}`, artistParams)
               .then(rez => rez.json())
               .then(artistData => {
-                const newTrackData = { ...data.tracks.items[0], artistImage: artistData.images[0].url}
+                const newTrackData : number = { ...data.tracks.items[0], artistImage: artistData.images[0]?.url}
                 setTrack([newTrackData])
                 console.log(newTrackData)
               })

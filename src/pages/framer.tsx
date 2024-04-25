@@ -2,7 +2,7 @@ import { useAnimation, motion, useInView } from "framer-motion"
 import React, { useEffect } from "react";
 import { useRef } from "react";
 import { repeat } from "rxjs";
-
+ 
 type AnimatedTextProps = {
   text : string | string[]
   el ? : keyof JSX.IntrinsicElements                      //specify the HTML element type (e.g., "div", "span", "h1") in which the text will be wrapped  If not provided, it defaults to a paragraph element ("p").
@@ -23,7 +23,7 @@ const defaultAnimations =  {
         opacity : 1,
         y : 0,
         // add transition prop to make animation quicker
-        transition: {
+        transition: { 
             duration: 1
         }
     }
@@ -75,7 +75,7 @@ export const AnimatedText = ({
 
     //create a textArray
     const textArray = Array.isArray(text) ? text : [text]
-
+ 
     return (
     <Wrapper className = {className}>
         {/* screen readers go see full word without breaking it into diff spans */}
@@ -92,7 +92,7 @@ export const AnimatedText = ({
                 visible : {transition : {staggerChildren: 0.1}},
                 hidden: {},
             }}
-            // transition={{staggerChildren: 0.1}}
+            // transition={{staggerChil dren: 0.1}}
             aria-hidden>
 
 
