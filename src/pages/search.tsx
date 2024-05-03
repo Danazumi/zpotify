@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {motion, useAnimate , useAnimation, useAnimationControls} from "framer-motion"
+import AnimatedList from "./list";
 
  
 
@@ -243,6 +244,8 @@ export default function Search(){
                _
             </motion.div>
         </main>
+
+        <AnimatedList/>
 
       </div>
 
